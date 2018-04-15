@@ -1,0 +1,253 @@
+
+/*           footer    */
+
+html, body {
+    height: 100% !important;
+}
+
+.footer-basic-centered{
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font: normal 18px sans-serif;
+    padding: 45px;
+    margin-top: 80px;
+    bottom: 0;
+}
+
+.footer-basic-centered .footer-company-motto{
+    color:  #8d9093;
+    font-size: 24px;
+    margin: 0;
+}
+
+.footer-basic-centered .footer-company-name{
+    color:  #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+    .footer-basic-centered{
+        padding: 35px;
+    }
+
+    .footer-basic-centered .footer-company-motto{
+        font-size: 18px;
+    }
+
+    .footer-basic-centered .footer-company-name{
+        font-size: 12px;
+    }
+
+}
+
+/*  authorization form */
+
+.form-width {
+    max-width: 25rem;
+}
+
+.has-float-label {
+    position: relative;
+}
+
+.has-float-label label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: text;
+    font-size: 75%;
+    opacity: 1;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    top: -.5em;
+    left: 0.75rem;
+    z-index: 3;
+    line-height: 1;
+    padding: 0 1px;
+}
+
+.has-float-label label::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background: white;
+    height: 2px;
+    top: 50%;
+    left: -.2em;
+    right: -.2em;
+    z-index: -1;
+}
+
+.has-float-label .form-control::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus) + label {
+    font-size: 150%;
+    opacity: .5;
+    top: .3em;
+}
+
+.input-group .has-float-label {
+    display: table-cell;
+}
+
+.input-group .has-float-label .form-control {
+    border-radius: 0.25rem;
+}
+
+.input-group .has-float-label:not(:last-child) .form-control {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.input-group .has-float-label:not(:first-child) .form-control {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -1px;
+}
+
+/*  HEADER  */
+
+.header-fixed {
+    background-color:#292c2f;
+    box-shadow:0 1px 1px #ccc;
+    padding: 20px 40px;
+    height: 96px;
+    color: #ffffff;
+    box-sizing: border-box;
+    top:-100px;
+
+    -webkit-transition:top 0.3s;
+    transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+    height: 80px;
+    display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+    float: left;
+    font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+    color: #5383d3;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+    font:16px Arial, Helvetica, sans-serif;
+    line-height: 54px;
+    float: right;
+}
+
+.header-fixed .header-limiter nav a{
+    display: inline-block;
+    padding: 0 5px;
+    text-decoration:none;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+    opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+    color: #608bd2;
+    /*pointer-events: none;*/
+    opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+    padding: 10px 40px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+    display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+    line-height: 28px;
+    font-size: 13px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+    .header-fixed {
+        padding: 20px 0;
+        height: 82px;
+    }
+
+    .header-fixed .header-limiter h1 {
+        float: none;
+        margin: -8px 0 10px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    .header-fixed .header-limiter nav {
+        line-height: 1;
+        float:none;
+    }
+
+    .header-fixed .header-limiter nav a {
+        font-size: 13px;
+    }
+
+    body.fixed .header-fixed {
+        display: none;
+    }
+
+}

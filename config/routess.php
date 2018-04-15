@@ -1,0 +1,27 @@
+<?php
+
+return array (
+//    'addlocation' => 'search/addLocation',
+    'set/log_time' => 'profile/setLogTime',
+    'delete/notification' => 'profile/deleteNotification',
+    'chat/send_message' => 'chat/send',
+    'chat/contacts' => 'chat/contacts',
+    'chat/([a-zA-Z]+)' => 'chat/chat/$1',
+    'search/parse_markers' => 'search/parseMarkers',
+    'authorization/activation/([a-zA-Z0-9]+)' => 'authorization/activation/$1',
+    'profile/action/([a-z]+)' => 'profile/action/$1',
+    'search/browsing/([0-9]+)/([a-z]+)' => 'search/browsing/$1/$2',
+    'search/research/([0-9]+)/([a-z]+)' => 'search/research/$1/$2',
+    'profile/notifications' => 'profile/notifications',
+    'profile/add_new_marker' => 'profile/add_marker',
+    'profile/delete_photo' => 'profile/delete_photo',
+    'profile/upload_profile_image' => 'profile/upload_profile_image',
+    'profile/upload_image' => 'profile/upload_image',
+    'profile/save_changes' =>'profile/save',
+    'authorization/restore_password' => 'authorization/restore_password',
+    'authorization/login' => 'authorization/login',
+    'authorization/logout' => 'authorization/logout',
+    'authorization/registration' => 'authorization/registration',
+    'authorization/facebook_login' => 'authorization/facebook_login',
+    'profile/[a-zA-Z0-9]+' => 'profile/user',
+);
